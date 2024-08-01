@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_10_am/modules/layout/hadeth/hadeth_details.dart';
+
+import '../../hadeth/hadeth_details.dart';
 
 class HadethScreen extends StatefulWidget {
   HadethScreen({super.key});
@@ -25,7 +27,7 @@ class _HadethScreenState extends State<HadethScreen> {
           Image.asset("assets/images/hadeth_logo.png"),
           Divider(),
           Text(
-            "Ahadeth",
+            "ahadeth".tr(),
             style: theme.textTheme.bodyLarge,
           ),
           Divider(),

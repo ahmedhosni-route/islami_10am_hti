@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_10_am/core/widgets/bg_widget.dart';
 import 'package:islami_10_am/modules/layout/screens/hadth_screen.dart';
@@ -24,11 +25,11 @@ class _LayoutScreenState extends State<LayoutScreen> {
     SettingsScreen()
   ];
   List<String> titles = [
-    "Islami",
-    "Hadeth",
-    "Sebha",
-    "Radio",
-    "Settings",
+    "islami",
+    "hadeth",
+    "sebha",
+    "radio",
+    "settings",
   ];
   PageController pageController = PageController();
   @override
@@ -37,7 +38,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            titles[selectedIndex],
+            titles[selectedIndex].tr(),
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -49,21 +50,21 @@ class _LayoutScreenState extends State<LayoutScreen> {
             setState(() {});
           },
           currentIndex: selectedIndex,
-          items: const [
+          items:  [
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/quran_icn.png")),
-                label: "Quran"),
+                label: "quran".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/hadeth.png")),
-                label: "Hadeth"),
+                label: "hadeth".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/sebha.png")),
-                label: "Sebha"),
+                label: "sebha".tr()),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/radio.png")),
-                label: "Radio"),
+                label: "radio".tr()),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Setteings"),
+                icon: Icon(Icons.settings), label: "settings".tr()),
           ],
         ),
         body: PageView(

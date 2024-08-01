@@ -1,13 +1,22 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_10_am/core/theme/app_theme.dart';
 import 'package:islami_10_am/modules/layout/layout_screen.dart';
 import 'package:islami_10_am/modules/splash/screens/spalsh_screen.dart';
-
-import 'modules/layout/hadeth/hadeth_details.dart';
+import 'modules/hadeth/hadeth_details.dart';
 import 'modules/quran/quran_details.dart';
 
-void main() {
-  runApp(const MyApp());
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp( EasyLocalization(
+      supportedLocales:const [Locale('ar'), Locale('en')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      startLocale: Locale("en"),
+
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +28,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
