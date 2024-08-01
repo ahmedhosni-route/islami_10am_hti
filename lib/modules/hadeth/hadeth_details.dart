@@ -27,7 +27,7 @@ class HadethDetails extends StatelessWidget {
                 top: size.height * 0.1),
             padding: const EdgeInsets.all(25),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.primaryColor,
                 boxShadow:const [
                   BoxShadow(
                       color: Colors.black12, blurRadius: 4, spreadRadius: 3),
