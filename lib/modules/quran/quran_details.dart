@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart' hide TextDirection;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +27,7 @@ class _QuranDetailsState extends State<QuranDetails> {
     return BgWidget(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Islami"),
+          title: Text("islami".tr()),
         ),
         body: Container(
           padding: const EdgeInsets.all(10),
