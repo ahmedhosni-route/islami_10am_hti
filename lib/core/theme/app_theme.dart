@@ -7,6 +7,7 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     fontFamily: GoogleFonts.elMessiri().fontFamily,
+    primaryColor: Colors.white,
     appBarTheme: AppBarTheme(
         backgroundColor: Colors.transparent,
         centerTitle: true,
@@ -37,6 +38,8 @@ class AppTheme {
         )),
   );
   static ThemeData darkTheme = ThemeData(
+    primaryColor: primaryDarkColor,
+
     scaffoldBackgroundColor: Colors.transparent,
     fontFamily: GoogleFonts.elMessiri().fontFamily,
     appBarTheme: AppBarTheme(
@@ -45,7 +48,7 @@ class AppTheme {
       elevation: 0,
       iconTheme: IconThemeData(color: Colors.white),
       titleTextStyle:
-          GoogleFonts.elMessiri(fontSize: 30, color: const Color(0xff242424)),
+          GoogleFonts.elMessiri(fontSize: 30, color: Colors.white),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,

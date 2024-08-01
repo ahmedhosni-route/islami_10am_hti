@@ -50,7 +50,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
             setState(() {});
           },
           currentIndex: selectedIndex,
-          items:  [
+          items: [
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage("assets/icons/quran_icn.png")),
                 label: "quran".tr()),
@@ -64,7 +64,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                 icon: ImageIcon(AssetImage("assets/icons/radio.png")),
                 label: "radio".tr()),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "settings".tr()),
+                icon: Icon(Icons.settings), label: context.tr("settings")),
           ],
         ),
         body: PageView(

@@ -34,7 +34,7 @@ class _QuranDetailsState extends State<QuranDetails> {
           margin:
               const EdgeInsets.only(top: 80, right: 15, left: 15, bottom: 35),
           decoration: BoxDecoration(
-              color: Colors.white,
+              color: theme.primaryColor,
               borderRadius: BorderRadius.circular(25),
               boxShadow: const [
                 BoxShadow(color: Colors.black12, spreadRadius: 5, blurRadius: 5)
